@@ -8,9 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My profile</title>
     <link rel="stylesheet" href="{{ asset('build/assets/style.css') }}">
-
-    {{-- Compiled assets --}}
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>

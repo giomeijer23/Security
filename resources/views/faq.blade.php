@@ -9,9 +9,6 @@
     <title>My profile</title>
     <link rel="stylesheet" href="{{ asset('build/assets/style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-
-    {{-- Compiled assets --}}
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
