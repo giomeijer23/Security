@@ -1,5 +1,6 @@
 <?php
 
+// In app/Http/Controllers/Auth/AuthenticatedSessionController.php
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -51,5 +52,15 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    protected function hasTooManyLoginAttempts(Request $request)
+    {
+        $maxAttempts = 2; // Maximaal aantal inlogpogingen
+        $decayMinutes = 1; // Tijd in minuten voordat opnieuw geprobeerd kan worden
+
+        return $this->limiter()->tooManyAttempts(
+            $this->throttleKey($request), $maxAttempts, $decayMinutes
+        );
     }
 }

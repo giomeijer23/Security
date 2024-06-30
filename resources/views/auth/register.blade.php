@@ -36,6 +36,9 @@
                                 required autocomplete="new-password" />
             </div>
 
+            <!-- Password Manager Encouragement -->
+            <p class="mt-2 text-sm text-gray-600">We raden je aan een wachtwoordmanager te gebruiken om sterke en unieke wachtwoorden te maken en te beheren.</p>
+
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
