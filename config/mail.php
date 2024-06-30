@@ -36,14 +36,16 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'host' => '127.0.0.1', // IP-adres van mailhog of hostname indien correct geconfigureerd
+            'port' => 1025,       // De poort waarop mailhog luistert
+            'encryption' => null, // Geen versleuteling voor mailhog, meestal null of ''
+            'username' => null,   // Geen gebruikersnaam nodig voor mailhog
+            'password' => null,   // Geen wachtwoord nodig voor mailhog
             'timeout' => null,
             'auth_mode' => null,
         ],
+
+        // Hieronder kun je andere mailers configureren zoals nodig
 
         'ses' => [
             'transport' => 'ses',
