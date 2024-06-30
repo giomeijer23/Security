@@ -25,9 +25,9 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/instellingen', function () {
+        return view('instellingen');
+    })->name('instellingen');
 
     Route::get('/welcome', function () {
         return view('welcome');

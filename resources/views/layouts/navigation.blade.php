@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('instellingen') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
                 </div>
@@ -15,8 +15,8 @@
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
                         {{ __('Welcome') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('instellingen')" :active="request()->routeIs('instellingen')">
+                        {{ __('Instellingen') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -73,8 +73,8 @@
             <x-responsive-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
                 {{ __('Welcome') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('instellingen')" :active="request()->routeIs('instellingen')">
+                {{ __('Instellingen') }}
             </x-responsive-nav-link>
         </div>
 
